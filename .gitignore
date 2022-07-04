@@ -1,0 +1,7 @@
+/venv/
+/.vscode/
+credentials.json
+client_secrets.json
+*.csv
+my_credentials.json
+/__pycache__/
