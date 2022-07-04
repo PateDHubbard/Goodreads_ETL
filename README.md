@@ -20,8 +20,8 @@ The user needs to provide Google Drive Oauth credentials in a `client_secrets.js
 The project also requires the user's Goodreads email and password to download the book data. This should be provided in a `my_credentials.json` file with the following format:
 ```json
 {
-    "Username": <goodreads_username>,
-    "Password": <goodreads_password>
+    "Username": "<goodreads_username>",
+    "Password": "<goodreads_password>"
 }
 ```
 
