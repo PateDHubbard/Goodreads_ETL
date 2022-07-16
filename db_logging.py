@@ -7,7 +7,7 @@ LOG_GROUP = str(uuid.uuid1())
 URL = "https://king-prawn-app-ebwri.ondigitalocean.app/logging/goodreads_etl"
 
 
-def send_log_to_db(log_name, log_status, log_notes):
+def send_log_to_db(log_name, log_status, log_notes=None):
     data = {
         "log_group": LOG_GROUP,
         "log_name": log_name,
