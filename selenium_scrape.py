@@ -51,6 +51,7 @@ def download_export(driver, download_path):
         os.remove(csv_path)
 
     flag = True
+    counter = 0
     while flag:
         time.sleep(5)
         try:
@@ -59,3 +60,6 @@ def download_export(driver, download_path):
                 flag = False
         except NoSuchElementException:
             print("Waiting...")
+            counter += 1
+            if counter > 75:
+                raise Exception("Waiting for export button time out.")

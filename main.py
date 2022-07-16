@@ -78,6 +78,7 @@ try:
             pass
     ###
     print("Succesfully uploaded final data to drive")
+    send_log_to_db("Upload Data to Drive", "Success")
 except Exception as e:
     send_log_to_db("Upload Data to Drive", "Failure", str(e))
     print(str(e))
