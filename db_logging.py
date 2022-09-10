@@ -8,8 +8,12 @@ import os
 LOG_GROUP = str(uuid.uuid1())
 
 SESSION = session
-ACCESS_ID = 'DO00M4Z4X8UH3GMFDT44'
-SECRET_KEY = 'Hx/cb9dcsluRa7cE3iehjwKqQ9gl4IJCgAPulASsPsM'
+
+with open("my_credentials.json") as file:
+    credentials = json.load(file)
+
+ACCESS_ID = credentials["do_spaces_access_id"]
+SECRET_KEY = credentials["do_spaces_secret_key"]
 
 
 def add_to_logs(logs, log_name, log_status, log_notes=None):
