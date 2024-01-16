@@ -69,7 +69,7 @@ rows_clean = {
     "date_read": [],
     "date_added": []
 }
-rows_raw = books_table.find_all("tr")[2:]
+rows_raw = books_table.find_all("tr")[1:]
 for row in rows_raw:
     rows_clean["title"].append(re.sub(" +|title|\n", " ", row.find_all("td")[3].text).strip())
     rows_clean["author"].append(re.sub(" +|author|\n|\\*", " ", row.find_all("td")[4].text).strip())
