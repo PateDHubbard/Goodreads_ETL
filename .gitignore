@@ -6,3 +6,5 @@ client_secrets.json
 my_credentials.json
 /__pycache__/
 testing.py
+.env
+*.html
